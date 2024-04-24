@@ -388,7 +388,7 @@ body {
 }
 .article .swiper-container {
   --swiper-theme-color: white;
-  width: 70%;
+  width: 75%;
   height: auto;
   position: relative;
   left: 100px;
@@ -449,15 +449,9 @@ body {
 .sponsors .swiper-container {
   --swiper-theme-color: $color2;
 }
-.sponsors .swiper-container .swiper-wrapper {
-  padding: 30px;
-  margin: 0 auto;
-}
 .sponsors .swiper-container .swiper-wrapper .swiper-slide {
+  margin: 20px;
   margin-bottom: 50px;
-}
-.sponsors .swiper-container .swiper-wrapper .swiper-slide img {
-  width: 200px;
 }
 .sponsors .swiper-container .swiper-pagination-bullet-active {
   background-color: #000;
@@ -601,7 +595,7 @@ footer .footer1 li a:hover {
 }
 
 .jumbotron1 {
-  padding-top: 100px;
+  padding-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -632,7 +626,7 @@ footer .footer1 li a:hover {
 
 .mystory {
   background-color: #fff;
-  padding: 30px;
+  padding: 48px;
 }
 .mystory .story {
   display: flex;
@@ -700,7 +694,7 @@ footer .footer1 li a:hover {
   height: 100%;
   width: auto;
   display: flex;
-  padding: 30px;
+  padding: 48px;
 }
 .titleSimulated .title {
   width: 400px;
@@ -769,7 +763,7 @@ footer .footer1 li a:hover {
   background-position: center;
   background-size: cover;
   height: 100%;
-  padding: 30px;
+  padding: 48px;
 }
 .sponsors1 h3 {
   padding-bottom: 20px;
@@ -781,7 +775,7 @@ footer .footer1 li a:hover {
 .sponsors1 .text {
   font-family: "Tajawal", sans-serif;
   font-size: 18px;
-  width: 280px;
+  width: 400px;
   height: auto;
   text-align: justify;
   padding-top: 20px;
@@ -790,7 +784,7 @@ footer .footer1 li a:hover {
 
 .sponsors2 {
   background-color: #fff;
-  padding: 30px;
+  padding: 48px;
 }
 .sponsors2 .text {
   font-family: "Tajawal", sans-serif;
@@ -817,4 +811,4 @@ footer h2 {
   transition: all 2s;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.scc.map */

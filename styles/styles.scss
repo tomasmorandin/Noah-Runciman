@@ -505,7 +505,7 @@ $height2: 80px;
 
     .swiper-container{
         --swiper-theme-color: white;
-        width: 75%;
+        width: 70%;
         height: auto;
         position: relative;
         left: 100px;
@@ -589,13 +589,17 @@ $height2: 80px;
     }
     .swiper-container{
         --swiper-theme-color: $color2;
-       
+        
 
         .swiper-wrapper{
+            padding: 30px;
+            margin: 0 auto;
 
             .swiper-slide{
-                margin: 20px;
                 margin-bottom: 50px;
+                img{
+                    width: 200px;
+                }
 
             }
         }
@@ -775,7 +779,7 @@ footer{
 //jumbotron//
 
 .jumbotron1{
-    padding-top: 150px;
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -812,7 +816,7 @@ footer{
 //My Story//
 .mystory{
     background-color: $color1;
-    padding: 48px;
+    padding: 30px;
 
     .story{
         display: flex;
@@ -896,7 +900,7 @@ footer{
     height: 100%;
     width: auto;
     display: flex;
-    padding: 48px;
+    padding: 30px;
 
     .title{
         width: 400px;
@@ -985,7 +989,7 @@ footer{
     background-position: center;
     background-size: cover;
     height: 100%;
-    padding: 48px;
+    padding: 30px;
 
     h3{
         padding-bottom: 20px;
@@ -998,7 +1002,7 @@ footer{
     .text{
         font-family: $font2;
         font-size: $fontsize4;
-        width: 400px;
+        width: 280px;
         height: auto;
         text-align: justify;
         padding-top: 20px;
@@ -1008,7 +1012,7 @@ footer{
 
 .sponsors2{
     background-color: $color1;
-    padding: 48px;
+    padding: 30px;
 
     .text{
         font-family: $font2;
@@ -1034,7 +1038,6 @@ footer{
        padding-top: 80px;
     }
 }
-
 
 .navbar-scrolled1{
     background-color: rgba(255, 255, 255, 0.5);
