@@ -1,0 +1,1042 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+// font-family: "Bebas Neue", sans-serif;
+// font-family: "Tajawal", sans-serif;
+
+
+$bg1:#ffffff00(255, 255, 255, 0);
+$bg2:rgba(0, 22, 43, 0.50);
+$bg3:#00162B;
+$bg4:#1A334D;
+$bg5:#0D2236;
+$bg6:#E5EAEF;
+$bg7:rgba(0, 22, 43, 0.6);
+
+$color1:#fff;
+$color2:#000;
+$color3:#98A1AA;
+$color4:#1A334D;
+
+
+$font1: "Bebas Neue", sans-serif;
+$font2: "Tajawal", sans-serif;
+
+$fontsize0: 115px;
+$fontsize1: 80px;
+$fontsize2: 40px;
+$fontsize3: 25px;
+$fontsize4: 18px;
+
+$height1: 1000px;
+$height2: 80px;
+
+//PAGE HOME//
+
+//Header//
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: $height2;
+    background-color: $bg1;
+    z-index: 99999;
+    padding-top: 0; 
+
+    .navbar-brand{
+        font-family: $font1;
+        font-size: $fontsize2;
+        padding-left: 22px;
+        padding-right: 25px;
+    }
+    .navbar-collapse{
+        justify-content: center;
+        width: 100%;
+        /*border: 0px solid $bg2;
+        border-radius: 35px;
+        background-color: $bg2;
+        margin-right: 45px;
+        margin-left: 15px;
+        padding-right: 30px;*/
+
+        .navbar-nav{
+            margin-right: 20px;
+
+            .nav-item{
+                padding-left: 25px;
+
+                .nav-link{
+                    font-family: $font2;
+                    font-size: $fontsize4;
+                    color: $color1;
+                    transition: all 0.3s;
+                }
+            }
+        }
+        .icons{
+            letter-spacing: 5px;
+            padding-left: 25px;
+            padding-bottom: 15px;
+            padding-top: 10px;
+            a{
+                i{
+                    color: $color1;
+                    font-size: $fontsize4;
+                }
+            }
+            
+        }
+    
+    }
+}
+
+.navbar .nav-link:hover {
+    color: white !important;
+    transform: scale(1.08);
+  }
+
+.navbar-scrolled{
+    background-color: $bg7;
+    transition: all 2s;
+}
+
+//Jumbotron//
+
+.jumbotron{
+    background-image: linear-gradient(to top , rgba(0, 22, 43, 0.99999), rgba(0, 22, 43, 0.00001)), url(../img/slide/3\ Mar.png), url(../img/slide/1\ Fondo\ cielo.png);
+    background-position: center, center, center;
+    background-size: cover, cover, cover;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    padding-left: 35px;
+    padding-right: 35px;
+    height: 100%;
+    width: auto;
+
+    .noah{
+        background-image: url(../img/slide/2\ Noah_2.png);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-size: contain;
+        position: relative;
+        top: 140px;
+        min-height: 500px;
+        width: auto;
+        animation-name: aparecer;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 3s;
+
+        @keyframes aparecer {
+            0% {
+            opacity: 0;
+            transform: translateX(200px);
+            }
+            30% {
+            opacity: 1;
+            }
+            60% {
+              opacity: 1;
+            }
+            100% {
+              transform: translateX(0);
+            }
+        }
+    }
+
+
+    /*background-image: linear-gradient(to top , rgba(0, 22, 43, 0.99999), rgba(0, 22, 43, 0.00001)), url(../img/slide/2\ Noah.png), url(../img/slide/3\ Mar.png), url(../img/slide/1\ Fondo\ cielo.png);
+    background-position: center, right, center, center;
+    background-size: cover, 500px, cover, cover;
+    background-repeat: no-repeat;
+    padding-top: 250px;
+    padding-left: 35px;
+    padding-right: 35px;*/
+    
+    .index-title{
+        font-family: $font1;
+        font-size: $fontsize1;
+        position: relative;
+        bottom: 150px;
+    }
+
+    .index-subtitle{
+        font-family: $font1;
+        font-size: $fontsize4;
+        color: $color1;
+        position: relative;
+        bottom: 170px;
+    }
+    .index-text{
+        font-family: $font2;
+        font-size: $fontsize4;
+        text-align: justify;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        position: relative;
+        bottom: 170px;
+    }
+
+
+    //About me Card//
+        h3{
+        font-size: $fontsize2;
+        font-family: $font1;
+        color: $color3;}
+        
+        .aboutme1{
+            background-color: $bg4;
+            border-radius: 5px;
+            max-width: 550px;
+            margin: 0 auto;
+                
+            .card-body{
+                padding-right: 30px;
+                padding-left: 30px;
+
+                h4{
+                    font-family: $font1;
+                    font-size: $fontsize4;
+                    color: $color1;
+                    position: none;
+                    bottom: 0px;
+                }
+
+                img{
+                    width: auto;
+                    height: 120px;
+                    // position: relative;
+                    // bottom: 60px;
+                    // right: 40px;
+                }
+
+                .card-title{
+                    font-family: $font1;
+                    font-size: $fontsize4;
+                    color: $color3;
+                }
+                .card-text{
+                    font-family: $font2;
+                    font-size: $fontsize4;
+                    font-weight: bold;
+                    img{
+                        width: 20px;
+                        height: 20px; 
+                    }
+                }
+            }
+        }
+}
+
+//About me//
+.aboutme2{
+    background-color: $bg3;
+    color: $color1;
+    font-family: $font2;
+    padding: 45px;
+
+    p{
+    font-size: $fontsize4;
+    max-width: 550px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    /*padding-top: 100px;*/
+    }
+
+    .btn{
+        background-color:$bg4;
+        border-radius: 15px;
+        border: 0 solid $bg4;
+        
+        a{
+        color: $color1;
+        padding: 60px;
+        }
+    }
+}
+
+//Countdown//
+
+.countdown{
+    background-image: url(../img/olimpycs/olypics\ cel.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 400px;
+    margin: 0 auto;
+    padding: 35px;
+    
+
+    h4{
+        font-size: $fontsize3;
+        font-family: $font2;
+        position: relative;
+        top: 120px;
+    }
+
+    .cont-temporizador{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 120px;
+        
+        .bloque{
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $color1;
+                font-size: $fontsize3;
+                font-weight: bold;
+                width: 50px;
+                height: 70px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                margin: 15px;
+            }
+            p{
+                font-size: $fontsize4;
+                color: $color1;
+            }
+        }
+    }
+}
+
+
+
+//suport my dreams//
+.dreams{
+    background-color: $bg3;
+    padding: 47px;
+
+    .row{
+        h2{
+            font-family: $font1;
+            font-size: $fontsize1;
+            color: $color1;
+        } 
+    
+        .p-dreams{
+            font-size: $fontsize4;
+            text-align: start;
+            font-family: $fontsize2;
+            background-color: $bg5;
+            padding: 25px;
+
+            .btn{
+                background-color:$bg4;
+                border-radius: 15px;
+                border: 0 solid $bg4;
+                width: 100%;
+                a{
+                    color: $color1;
+                }
+            }
+        }
+
+        .img-dreams{
+            padding-left: 0;
+            padding-right: 0;
+
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+//accordion//
+.accordion{
+    padding: 35px;
+    .accordion-item{
+        text-align: center;
+        h3{
+            font-size: $fontsize2;
+            font-family: $font1;
+            color: $color3;
+        }
+        .event{
+            border-bottom: 1px solid black;
+            margin-top: 30px;
+        }
+        .date{
+            width: 70px;
+            height: auto;
+            border: 2px solid $color2;
+            display: inline-block;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: $font1;
+            font-size: $fontsize3;
+            h4{
+                font-size: $fontsize2;
+            }
+            
+        }
+
+        .date1{
+            border: 0px solid $color2;
+            text-transform: uppercase;
+        }
+
+        .nameevent{
+            font-family: $font1;
+            font-size: $fontsize3;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+
+        .placeevent{
+            font-family: $font1;
+            font-size: $fontsize3;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            img{
+                width: 40px;
+                height: 30px
+            }
+        }
+
+        .accordion-header{
+            text-align: center;
+            line-height: 3;
+
+            .accordion-button:not(.collapsed) {
+                color: $color3;
+                background-color: $color1;
+                box-shadow: none;
+            }
+            
+            .accordion-button:focus {
+                border-color: $color2;
+            }
+            
+            .accordion-button {
+                width: 100%;
+                font-size: $fontsize2;
+                color: $color3;
+                font-family: $font1;
+                text-align: center;
+            }
+        }
+
+        .accordion-button::after {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            background-image: url(../img/icons/arrow_down.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: transform .2s ease-in-out;
+        }
+        
+        .accordion-button:not(.collapsed)::after {
+            background-image: url(../img/icons/arrow_down.png);
+            transform: rotate(-180deg);
+        }
+
+        .accordion-collapse{
+            transition: all 1.5s;
+            text-align: center;
+            
+            .accordion-body{
+                @extend .placeevent; 
+                .event{
+                    @extend .event;
+                }
+                .date{
+                    @extend .date;
+                    h3{
+                        font-size: $fontsize2;
+                    }
+                }
+                .date1{
+                    @extend .date1;
+                }
+                .nameevent{
+                    @extend .nameevent;
+                }
+                .placeevent{
+                    @extend .placeevent;
+                    img{
+                        width: 40px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Swiper Cards PHOTOS y VIDEOS //
+
+.article{
+    background-color: $bg3;
+    width: auto;
+    height: 100%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    h2{
+        font-size: $fontsize0;
+        font-family: $font1;
+        color: $color4;
+        position: absolute;
+        margin: 200px 0px;
+        transform: rotate(-90deg);
+    }
+
+    .swiper-container{
+        --swiper-theme-color: white;
+        width: 75%;
+        height: auto;
+        position: relative;
+        left: 100px;
+
+        .swiper-wrapper{
+
+            .video-card{
+
+                video{
+                    border: 1px solid rgba(0, 0, 0, .125);
+                    border-radius: 8px;
+                }
+            }
+
+            .swiper-slide{
+                background-color: none;
+                border: 1px solid rgba(0, 0, 0, .125);
+
+                .card-body{
+
+                    .card-text1{
+                        color: $color4;
+                        font-weight: bold;
+                    }
+    
+                    .card-text2{
+                        color: $color2;
+                    }
+    
+                    .btn{
+                        font-weight: bold;
+                        color: $color4;
+                        padding: 0;
+                    }
+    
+                }
+
+                .video-body{
+                    padding: 0rem 1rem;
+
+                    .card-text3{
+                        position: absolute;
+                        top: 75%;
+                    }
+    
+                    .btn1{
+                        position: absolute;
+                        top: 90%;
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: white;
+        }
+    }
+
+    .swiper-button-prev{
+        color: rgba(255, 255, 255, 0);
+     }
+     .swiper-button-next{
+         color: rgba(255, 255, 255, 0);
+     }
+    
+}
+
+//Sponsors//
+.sponsors{
+    background-color: $color1;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    padding: 48px;
+
+    h3{
+        font-size: $fontsize2;
+        font-family: $font1;
+        color: $color3;
+
+    }
+    .swiper-container{
+        --swiper-theme-color: $color2;
+       
+
+        .swiper-wrapper{
+
+            .swiper-slide{
+                margin: 20px;
+                margin-bottom: 50px;
+
+            }
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #000;
+        }
+        
+        .swiper-button-prev{
+           color: rgba(255, 255, 255, 0);
+        }
+        .swiper-button-next{
+            color: rgba(255, 255, 255, 0);
+        }
+    }
+
+    .btn{
+        width: 280px;
+        border-radius: 25px ;
+        background-color: $bg4;
+        border: 0px solid $bg4;
+        margin-bottom: 25px;
+        display: block;
+        margin: 0 auto;
+    }
+
+}
+
+
+//Footer//
+footer{
+    background-color: $bg6;
+    background-size: cover;
+    padding: 48px;
+    h2{
+        font-size: $fontsize1;
+        font-family: $font1;
+        color: $color3;
+    }
+    img{
+        width: 300px;
+        height: auto;
+    }
+
+    input{
+        border-radius: 5px ;
+        padding: 2px;
+        border: 1px solid $color2;
+        font-size: $fontsize4;
+        font-family: $font2;
+        margin-bottom: 10px;
+        width: 100%;
+        height: auto;
+        display: block;
+        background-color: $bg6;
+        
+    }
+
+    input:focus{
+        box-shadow: inset 0 0 5px $color2;
+        border: 3px solid $color2;
+    }
+
+    textarea{
+        border-radius: 5px ;
+        padding: 2px;
+        border: 1px solid $color2;
+        font-size: $fontsize4;
+        margin-bottom: 10px;
+        width: 100%;
+        height: auto;
+        background-color: $bg6;
+    }
+
+    textarea:focus{
+        box-shadow: inset 0 0 5px $color2;
+        border: 3px solid $color2;
+        margin-bottom: 25px;
+    }
+
+    input[type="submit"]{
+        width: 47%;
+        display: inline-block;
+        border-radius: 25px ;
+        background-color: $bg4;
+        color: $color1;
+        margin-bottom: 25px;
+    }
+    
+    input[type="reset"]{
+        width: 47%;
+        display: inline-block;
+        border-radius: 25px ;
+        background-color: $color1;
+        border: 1px solid $color4;
+        color: $color4;
+        margin-right: 5px;
+    }
+    p{
+        font-size: $fontsize4;
+        font-family: $font2;
+        color: $color4;
+    }
+
+    h3{
+        font-size: $fontsize2;
+        font-family: $font1;
+        color: $color3;
+        }
+
+    .btn{
+        width: 100%;
+        display: inline-block;
+        border-radius: 25px ;
+        background-color: $bg4;
+        border: 0px solid $bg4;
+        margin-bottom: 25px;
+    }
+
+    .webs{
+        img{
+            width: 100px;
+            height: auto;
+            }
+
+        h3{
+        font-size: $fontsize2;
+        font-family: $font1;
+        color: $color3;
+        }
+
+        a{
+            letter-spacing: 5px;      
+            color: $color3;
+            font-size: $fontsize3;
+        }
+    }
+
+    .thanks{
+        h3{
+        font-family: $font1;
+        font-size: $fontsize2;
+        color: $color4;
+        }
+
+        img{
+            width: 150px;
+            height: auto;
+        }
+        h4{
+        font-family: $font1;
+        font-size: $fontsize2;
+        color: $color3;
+        }
+
+    }
+
+
+    .footer1{
+        li{
+            list-style: none;
+            font-size: $fontsize4;
+            display: inline-block;
+            padding: 5px;
+            a{
+                color: $color3;
+            }
+            a:hover{
+                color: $color2;
+                font-family: $font2;
+            }
+        }
+    }
+}
+
+//PAGE ABOUT ME//
+
+//jumbotron//
+
+.jumbotron1{
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .about-title {
+        font-family: $font1;
+        font-size: $fontsize1;    
+    }
+
+    .about-subtitle{
+        font-family: $font1;
+        font-size: $fontsize4;
+        color: $color1;
+    }
+    
+    .about-text{
+        font-size: $fontsize4;
+        max-width: 380px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .aboutme{
+        margin-bottom: 50px;
+        width: auto;
+    
+        .card-body2{
+            margin: 40px 40px 40px 40px;
+            padding: 0px;
+        }
+    }
+}
+
+//My Story//
+.mystory{
+    background-color: $color1;
+    padding: 48px;
+
+    .story{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        width: 280px;
+        height: auto;
+        margin: 0 auto;
+
+        h3{
+            font-size: $fontsize2;
+            font-family: $font1;
+            color: $color3;
+        }
+
+        p{
+            text-align: justify;
+            font-family: $font2;
+            padding-top: 20px;
+        }
+
+    }
+}
+
+//suport my dreams//
+.dreams1{
+    background-color: $color1;
+    font-family: $font2;
+    .row{
+        h2{
+            color: $color4;
+        }
+        .p-dreams1{
+            background-color: $bg6;
+            P{
+                color: $color4;
+            }
+        }
+    }
+}
+
+//PAGE DONATE//
+
+//Donate//
+
+.dreams2{
+    background-color: $bg3;
+    display: flex;
+    justify-content: center;
+    font-size: $fontsize4;
+    font-family: $font2;
+    
+    .row{
+        width: 800px;
+        height: auto;
+        margin-bottom: 40px;
+
+        h3{
+            color: $color3;
+            margin-top: 80px;
+            font-family: $font1;
+            font-size: $fontsize2;
+        }
+        .p-dreams2{
+            background-color: $bg3;
+    
+            P{
+                color: $color1;
+            }
+            .btn{
+                background-color: $bg4;
+            }
+        }
+    }
+}
+
+//Text simulated//
+
+.titleSimulated{
+    background-color: $color1;
+    height: 100%;
+    width: auto;
+    display: flex;
+    padding: 48px;
+
+    .title{
+        width: 400px;
+        height: auto;
+        margin: 0 auto;
+
+        h3{
+            font-family: $font1;
+            color: $color3;
+            font-size: $fontsize2;
+        }
+        
+        p{
+            text-align: center;
+            font-family: $font2;
+            color: $color4;
+            font-size: $fontsize4;
+        }
+    }
+}
+
+
+//PAGE NEWS//
+
+//Swiper Cards//
+
+.article{
+    .separate{
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+}
+
+// Swiper cards Photos //
+.article1{
+    background-color: $bg6;
+    
+    h3{
+        padding-bottom: 20px;
+        font-family: $font1;
+        color: $color3;
+        font-size: $fontsize2;
+    }
+
+    .swiper-container{
+        left: 35px;
+
+        .swiper-pagination-bullet-active {
+            background-color: #000;
+        }
+    }
+    
+    .swiper-button-prev{
+       color: rgba(255, 255, 255, 0);
+    }
+    .swiper-button-next{
+        color: rgba(255, 255, 255, 0);
+    }
+}
+
+// Swiper Cards Videos //
+
+.article2{
+    background-color: $bg3;
+
+    h3{
+        padding-bottom: 20px;
+        padding-top: 80px;
+        font-family: $font1;
+        color: $color3;
+        font-size: $fontsize2;
+    }
+
+    .swiper-container{
+        left: 35px;
+        .swiper-pagination-bullet-active {
+        background-color: white;
+        }
+    }
+}
+
+//PAGE SPONSORS//
+.sponsors1{
+    background-image: url(../img/sponsors/Slide\ PC.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    padding: 48px;
+
+    h3{
+        padding-bottom: 20px;
+        padding-top: 80px;
+        font-family: $font1;
+        color: $color3;
+        font-size: $fontsize2;
+    }
+
+    .text{
+        font-family: $font2;
+        font-size: $fontsize4;
+        width: 400px;
+        height: auto;
+        text-align: justify;
+        padding-top: 20px;
+        margin: 0 auto;
+    }
+}
+
+.sponsors2{
+    background-color: $color1;
+    padding: 48px;
+
+    .text{
+        font-family: $font2;
+        font-size: $fontsize4;
+        width: 400px;
+        height: auto;
+        text-align: justify;
+        padding-top: 20px;
+        margin: 0 auto;
+    }
+
+    .img-sponsor2{
+        width: 250px;
+        height: auto;
+        display: flex;
+        margin: 0 auto;
+    }
+}
+
+//CONTACT ME//
+footer{
+    h2{
+       padding-top: 80px;
+    }
+}
+
+
+.navbar-scrolled1{
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 2s;
+}
