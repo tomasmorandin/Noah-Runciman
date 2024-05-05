@@ -83,6 +83,7 @@ $height2: 80px;
         font-size: $fontsize2;
         padding-left: 22px;
         padding-right: 25px;
+        text-shadow: 2px 2px $bg4;
     }
     .navbar-collapse{
         justify-content: center;
@@ -434,28 +435,32 @@ $height2: 80px;
 //accordion//
 .accordion{
     padding: 35px;
+    color: $color4;
     
     .accordion-item{
         text-align: center;
-        border: 1px solid black;
+        border: 2px solid $color4;
+
         h3{
             font-size: $fontsize2;
             font-family: $font1;
             color: $color3;
         }
         .event{
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid $color4;
             margin-top: 30px;
         }
+
         .date{
             width: 70px;
             height: auto;
-            border: 2px solid $color2;
+            border: 2px solid $color4;
             display: inline-block;
             text-align: center;
             text-transform: uppercase;
             font-family: $font1;
             font-size: $fontsize3;
+
             h4{
                 font-size: $fontsize2;
             }
@@ -463,7 +468,7 @@ $height2: 80px;
         }
 
         .date1{
-            border: 0px solid $color2;
+            border: 0px solid $color4;
             text-transform: uppercase;
         }
 
@@ -1201,6 +1206,13 @@ footer{
 }
 
 //CONTACT ME//
+
+.navbar-light{
+    .navbar-brand{
+    text-shadow: 2px 2px $color1;
+    }
+}
+
 
 footer{
     h2{

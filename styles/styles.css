@@ -44,6 +44,7 @@ body {
   font-size: 40px;
   padding-left: 22px;
   padding-right: 25px;
+  text-shadow: 2px 2px #1A334D;
 }
 .navbar .navbar-collapse {
   justify-content: center;
@@ -330,10 +331,11 @@ body {
 
 .accordion {
   padding: 35px;
+  color: #1A334D;
 }
 .accordion .accordion-item {
   text-align: center;
-  border: 1px solid black;
+  border: 2px solid #1A334D;
 }
 .accordion .accordion-item h3 {
   font-size: 40px;
@@ -341,13 +343,13 @@ body {
   color: #98A1AA;
 }
 .accordion .accordion-item .event, .accordion .accordion-item .accordion-collapse .accordion-body .event {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #1A334D;
   margin-top: 30px;
 }
 .accordion .accordion-item .date, .accordion .accordion-item .accordion-collapse .accordion-body .date {
   width: 70px;
   height: auto;
-  border: 2px solid #000;
+  border: 2px solid #1A334D;
   display: inline-block;
   text-align: center;
   text-transform: uppercase;
@@ -358,7 +360,7 @@ body {
   font-size: 40px;
 }
 .accordion .accordion-item .date1, .accordion .accordion-item .accordion-collapse .accordion-body .date1 {
-  border: 0px solid #000;
+  border: 0px solid #1A334D;
   text-transform: uppercase;
 }
 .accordion .accordion-item .nameevent, .accordion .accordion-item .accordion-collapse .accordion-body .nameevent {
@@ -932,6 +934,10 @@ footer .footer1 ul li a:hover {
   height: auto;
   display: flex;
   margin: 0 auto;
+}
+
+.navbar-light .navbar-brand {
+  text-shadow: 2px 2px #fff;
 }
 
 footer h2 {
