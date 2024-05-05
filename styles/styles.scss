@@ -152,15 +152,6 @@ $height2: 80px;
             }
         }
     }
-
-
-    /*background-image: linear-gradient(to top , rgba(0, 22, 43, 0.99999), rgba(0, 22, 43, 0.00001)), url(../img/slide/2\ Noah.png), url(../img/slide/3\ Mar.png), url(../img/slide/1\ Fondo\ cielo.png);
-    background-position: center, right, center, center;
-    background-size: cover, 500px, cover, cover;
-    background-repeat: no-repeat;
-    padding-top: 250px;
-    padding-left: 35px;
-    padding-right: 35px;*/
     
     .index-title{
         font-family: $font1;
@@ -256,13 +247,31 @@ $height2: 80px;
         background-color:$bg4;
         border-radius: 15px;
         border: 0 solid $bg4;
+        transition: all 0.7s;
         
         a{
         color: $color1;
         padding: 60px;
         }
     }
+
+    .btn:hover {
+        transform: scale(1.1);
+    }
+
 }
+
+// a:visited{
+//     color: green;
+// }
+
+// button:visited{
+//     background-color: #98A1AA;
+// }
+
+// .text-decoration-none:visited{
+//     background-color: #98A1AA;
+// }
 
 //Countdown//
 
@@ -284,14 +293,13 @@ $height2: 80px;
         top: 120px;
     }
 
-    .cont-temporizador{
+    .countdown-timer{
         display: flex;
         justify-content: center;
         position: relative;
         top: 120px;
         
         .bloque{
-            
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -343,9 +351,14 @@ $height2: 80px;
                 border-radius: 15px;
                 border: 0 solid $bg4;
                 width: 100%;
+                transition: all 0.7s;
                 a{
                     color: $color1;
                 }
+            }
+
+            .btn:hover {
+                transform: scale(1.1);
             }
         }
 
@@ -364,8 +377,10 @@ $height2: 80px;
 //accordion//
 .accordion{
     padding: 35px;
+    
     .accordion-item{
         text-align: center;
+        border: 1px solid black;
         h3{
             font-size: $fontsize2;
             font-family: $font1;
@@ -416,12 +431,6 @@ $height2: 80px;
         .accordion-header{
             text-align: center;
             line-height: 3;
-
-            .accordion-button:not(.collapsed) {
-                color: $color3;
-                background-color: $color1;
-                box-shadow: none;
-            }
             
             .accordion-button:focus {
                 border-color: $color2;
@@ -434,6 +443,12 @@ $height2: 80px;
                 font-family: $font1;
                 text-align: center;
             }
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: $color2;
+            background-color: $color1;
+            box-shadow: none;
         }
 
         .accordion-button::after {
@@ -493,6 +508,7 @@ $height2: 80px;
     height: 100%;
     padding-top: 48px;
     padding-bottom: 48px;
+    overflow: hidden;
 
     h2{
         font-size: $fontsize0;
@@ -548,7 +564,7 @@ $height2: 80px;
 
                     .card-text3{
                         position: absolute;
-                        top: 75%;
+                        top: 70%;
                     }
     
                     .btn1{
@@ -561,6 +577,16 @@ $height2: 80px;
 
         .swiper-pagination-bullet-active {
             background-color: white;
+        }
+
+        .swiper-pagination{
+            text-align: start;
+        }
+
+        .swiper-pagination-bullet{
+            background-color: $color1;
+            width: 10px;
+            height: 10px;
         }
     }
 
@@ -580,6 +606,7 @@ $height2: 80px;
     height: auto;
     width: 100%;
     padding: 48px;
+    overflow: hidden;
 
     h3{
         font-size: $fontsize2;
@@ -604,7 +631,11 @@ $height2: 80px;
             }
         }
         .swiper-pagination-bullet-active {
-            background-color: #000;
+            background-color: $color2;
+        }
+
+        .swiper-pagination-bullet{
+            background-color: $color2;
         }
         
         .swiper-button-prev{
@@ -623,6 +654,11 @@ $height2: 80px;
         margin-bottom: 25px;
         display: block;
         margin: 0 auto;
+        transition: all 0.7s;
+    }
+
+    .btn:hover {
+        transform: scale(1.1);
     }
 
 }
@@ -686,6 +722,7 @@ footer{
         background-color: $bg4;
         color: $color1;
         margin-bottom: 25px;
+        line-height: 1.5;
     }
     
     input[type="reset"]{
@@ -696,7 +733,9 @@ footer{
         border: 1px solid $color4;
         color: $color4;
         margin-right: 5px;
+        line-height: 1.5;
     }
+
     p{
         font-size: $fontsize4;
         font-family: $font2;
@@ -716,6 +755,11 @@ footer{
         background-color: $bg4;
         border: 0px solid $bg4;
         margin-bottom: 25px;
+        transition: all 0.7s;
+    }
+
+    .btn:hover {
+        transform: scale(1.1);
     }
 
     .webs{
@@ -758,19 +802,25 @@ footer{
 
 
     .footer1{
-        li{
-            list-style: none;
-            font-size: $fontsize4;
-            display: inline-block;
-            padding: 5px;
-            a{
-                color: $color3;
-            }
-            a:hover{
-                color: $color2;
-                font-family: $font2;
+        
+        ul{
+            padding-left: 0;
+            li{
+                list-style: none;
+                font-size: $fontsize4;
+                display: inline-block;
+                padding: 5px;
+
+                a{
+                    color: $color3;
+                }
+                a:hover{
+                    color: $color2;
+                    font-family: $font2;
+                }
             }
         }
+       
     }
 }
 
@@ -951,6 +1001,10 @@ footer{
         .swiper-pagination-bullet-active {
             background-color: #000;
         }
+
+        .swiper-pagination-bullet{
+            background-color: $color2;
+        }
     }
     
     .swiper-button-prev{
@@ -1017,7 +1071,7 @@ footer{
     .text{
         font-family: $font2;
         font-size: $fontsize4;
-        width: 400px;
+        width: 280px;
         height: auto;
         text-align: justify;
         padding-top: 20px;
@@ -1025,7 +1079,7 @@ footer{
     }
 
     .img-sponsor2{
-        width: 250px;
+        width: 280px;
         height: auto;
         display: flex;
         margin: 0 auto;

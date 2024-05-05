@@ -113,21 +113,21 @@
 <!-- Countdown -->
 <section  class="countdown">
     <h4 class="text-center text-white">Countdown to The 2024 Olympic Games</h4>
-<div class="cont-temporizador">
+<div class="countdown-timer">
     <div class="bloque">
-        <div class="dias" id="dias">00</div>
+        <div class="days" id="days">00</div>
         <p>Days</p>
     </div>
     <div class="bloque">
-        <div class="horas" id="horas">00</div>
+        <div class="hours" id="hours">00</div>
         <p>Hours</p>
     </div>
     <div class="bloque">
-        <div class="minutos" id="minutos">00</div>
+        <div class="minutes" id="minutes">00</div>
         <p>Minutes</p>
     </div>
     <div class="bloque">
-        <div class="segundos" id="segundos">00</div>
+        <div class="seconds" id="seconds">00</div>
         <p>Seconds</p>
     </div>
 </div>
@@ -600,9 +600,9 @@
 </script>
 
 <script>
-    var swiper = new Swiper('.sponsor', {
+    var swiper = new Swiper('.sponsors', {
       slidesPerView: 1,
-      spaceBetween: 25,
+      spaceBetween: 30,
       slidesPerGroup: 1,
       loop: true,
       loopFillGroupWithBlank: true,
@@ -654,6 +654,57 @@
     });
 </script>
 
+
+<!-- Countdown -->
+
+<script>
+
+    const storeOpening = new Date('Jun 24, 2024 00:00:00');
+    
+    setCountdown(storeOpening);
+    
+    setInterval(function() {
+        setCountdown(storeOpening);
+    },1000)
+    
+    function setCountdown(countingDownTime){
+    
+    let now = new Date();
+    let timeRemaining = countingDownTime - now;
+    console.log(timeRemaining); 
+    
+    //seconds
+    let seconds = Math.floor(timeRemaining / 1000);
+    //minutes
+    let minutes = Math.floor(timeRemaining / (1000*60));
+    //hours
+    let hours = Math.floor(timeRemaining / (1000*60*60));
+    //days
+    let days = Math.floor(timeRemaining / (1000*60*60*24));
+    
+    console.log(days, hours, minutes, seconds);
+    
+    let daysToDisplay = days;
+    
+    let hoursToDisplay = hours - (days * 24);
+    
+    let minutesToDisplay = minutes - (hours * 60);
+    
+    let secondsToDisplay = seconds - (minutes * 60);
+    
+    console.log(daysToDisplay, hoursToDisplay, minutesToDisplay, secondsToDisplay);
+    
+    const daysE1 = document.getElementById('days');
+    const hoursE1 = document.getElementById('hours');
+    const minutesE1 = document.getElementById('minutes');
+    const secondsE1 = document.getElementById('seconds');
+    
+    daysE1.textContent = daysToDisplay;
+    hoursE1.textContent = hoursToDisplay;
+    minutesE1.textContent = minutesToDisplay;
+    secondsE1.textContent = secondsToDisplay;
+    }
+    </script>
 
 </body>
 </html>

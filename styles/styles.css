@@ -76,13 +76,6 @@ body {
   padding-right: 35px;
   height: 100%;
   width: auto;
-  /*background-image: linear-gradient(to top , rgba(0, 22, 43, 0.99999), rgba(0, 22, 43, 0.00001)), url(../img/slide/2\ Noah.png), url(../img/slide/3\ Mar.png), url(../img/slide/1\ Fondo\ cielo.png);
-  background-position: center, right, center, center;
-  background-size: cover, 500px, cover, cover;
-  background-repeat: no-repeat;
-  padding-top: 250px;
-  padding-left: 35px;
-  padding-right: 35px;*/
 }
 .jumbotron .noah {
   background-image: url(../img/slide/2\ Noah_2.png);
@@ -193,10 +186,14 @@ body {
   background-color: #1A334D;
   border-radius: 15px;
   border: 0 solid #1A334D;
+  transition: all 0.7s;
 }
 .aboutme2 .btn a {
   color: #fff;
   padding: 60px;
+}
+.aboutme2 .btn:hover {
+  transform: scale(1.1);
 }
 
 .countdown {
@@ -215,18 +212,18 @@ body {
   position: relative;
   top: 120px;
 }
-.countdown .cont-temporizador {
+.countdown .countdown-timer {
   display: flex;
   justify-content: center;
   position: relative;
   top: 120px;
 }
-.countdown .cont-temporizador .bloque {
+.countdown .countdown-timer .bloque {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.countdown .cont-temporizador .bloque div {
+.countdown .countdown-timer .bloque div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,7 +236,7 @@ body {
   border-radius: 5px;
   margin: 15px;
 }
-.countdown .cont-temporizador .bloque p {
+.countdown .countdown-timer .bloque p {
   font-size: 18px;
   color: #fff;
 }
@@ -265,9 +262,13 @@ body {
   border-radius: 15px;
   border: 0 solid #1A334D;
   width: 100%;
+  transition: all 0.7s;
 }
 .dreams .row .p-dreams .btn a {
   color: #fff;
+}
+.dreams .row .p-dreams .btn:hover {
+  transform: scale(1.1);
 }
 .dreams .row .img-dreams {
   padding-left: 0;
@@ -283,6 +284,7 @@ body {
 }
 .accordion .accordion-item {
   text-align: center;
+  border: 1px solid black;
 }
 .accordion .accordion-item h3 {
   font-size: 40px;
@@ -330,11 +332,6 @@ body {
   text-align: center;
   line-height: 3;
 }
-.accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
-  color: #98A1AA;
-  background-color: #fff;
-  box-shadow: none;
-}
 .accordion .accordion-item .accordion-header .accordion-button:focus {
   border-color: #000;
 }
@@ -344,6 +341,11 @@ body {
   color: #98A1AA;
   font-family: "Bebas Neue", sans-serif;
   text-align: center;
+}
+.accordion .accordion-item .accordion-button:not(.collapsed) {
+  color: #000;
+  background-color: #fff;
+  box-shadow: none;
 }
 .accordion .accordion-item .accordion-button::after {
   flex-shrink: 0;
@@ -377,6 +379,7 @@ body {
   height: 100%;
   padding-top: 48px;
   padding-bottom: 48px;
+  overflow: hidden;
 }
 .article h2 {
   font-size: 115px;
@@ -418,7 +421,7 @@ body {
 }
 .article .swiper-container .swiper-wrapper .swiper-slide .video-body .card-text3 {
   position: absolute;
-  top: 75%;
+  top: 70%;
 }
 .article .swiper-container .swiper-wrapper .swiper-slide .video-body .btn1 {
   position: absolute;
@@ -426,6 +429,14 @@ body {
 }
 .article .swiper-container .swiper-pagination-bullet-active {
   background-color: white;
+}
+.article .swiper-container .swiper-pagination {
+  text-align: start;
+}
+.article .swiper-container .swiper-pagination-bullet {
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
 }
 .article .swiper-button-prev {
   color: rgba(255, 255, 255, 0);
@@ -440,6 +451,7 @@ body {
   height: auto;
   width: 100%;
   padding: 48px;
+  overflow: hidden;
 }
 .sponsors h3 {
   font-size: 40px;
@@ -462,6 +474,9 @@ body {
 .sponsors .swiper-container .swiper-pagination-bullet-active {
   background-color: #000;
 }
+.sponsors .swiper-container .swiper-pagination-bullet {
+  background-color: #000;
+}
 .sponsors .swiper-container .swiper-button-prev {
   color: rgba(255, 255, 255, 0);
 }
@@ -476,6 +491,10 @@ body {
   margin-bottom: 25px;
   display: block;
   margin: 0 auto;
+  transition: all 0.7s;
+}
+.sponsors .btn:hover {
+  transform: scale(1.1);
 }
 
 footer {
@@ -530,6 +549,7 @@ footer input[type=submit] {
   background-color: #1A334D;
   color: #fff;
   margin-bottom: 25px;
+  line-height: 1.5;
 }
 footer input[type=reset] {
   width: 47%;
@@ -539,6 +559,7 @@ footer input[type=reset] {
   border: 1px solid #1A334D;
   color: #1A334D;
   margin-right: 5px;
+  line-height: 1.5;
 }
 footer p {
   font-size: 18px;
@@ -557,6 +578,10 @@ footer .btn {
   background-color: #1A334D;
   border: 0px solid #1A334D;
   margin-bottom: 25px;
+  transition: all 0.7s;
+}
+footer .btn:hover {
+  transform: scale(1.1);
 }
 footer .webs img {
   width: 100px;
@@ -586,16 +611,19 @@ footer .thanks h4 {
   font-size: 40px;
   color: #98A1AA;
 }
-footer .footer1 li {
+footer .footer1 ul {
+  padding-left: 0;
+}
+footer .footer1 ul li {
   list-style: none;
   font-size: 18px;
   display: inline-block;
   padding: 5px;
 }
-footer .footer1 li a {
+footer .footer1 ul li a {
   color: #98A1AA;
 }
-footer .footer1 li a:hover {
+footer .footer1 ul li a:hover {
   color: #000;
   font-family: "Tajawal", sans-serif;
 }
@@ -739,6 +767,9 @@ footer .footer1 li a:hover {
 .article1 .swiper-container .swiper-pagination-bullet-active {
   background-color: #000;
 }
+.article1 .swiper-container .swiper-pagination-bullet {
+  background-color: #000;
+}
 .article1 .swiper-button-prev {
   color: rgba(255, 255, 255, 0);
 }
@@ -795,14 +826,14 @@ footer .footer1 li a:hover {
 .sponsors2 .text {
   font-family: "Tajawal", sans-serif;
   font-size: 18px;
-  width: 400px;
+  width: 280px;
   height: auto;
   text-align: justify;
   padding-top: 20px;
   margin: 0 auto;
 }
 .sponsors2 .img-sponsor2 {
-  width: 250px;
+  width: 280px;
   height: auto;
   display: flex;
   margin: 0 auto;
