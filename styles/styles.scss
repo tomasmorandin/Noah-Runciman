@@ -52,6 +52,31 @@ $height2: 80px;
     background-color: $bg1;
     z-index: 99999;
     padding-top: 0; 
+    animation-name: movimiento1;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.5s;
+
+            @keyframes movimiento1 {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                30%{
+                    opacity: 1;
+                    text-shadow: 0 0 5px $bg3;
+                }
+    
+                60%{
+                    opacity: 1;
+                    text-shadow: 0 0 10px $bg3;
+                }
+                
+                100%{
+                    transform: translateY(0);
+                }
+            }
+   
 
     .navbar-brand{
         font-family: $font1;
@@ -92,18 +117,21 @@ $height2: 80px;
                 i{
                     color: $color1;
                     font-size: $fontsize4;
+                    transition: all 0.3s;
                 }
             }
             
         }
-    
+
+        i:hover {
+            transform: scale(1.2);
+        }
     }
 }
 
-.navbar .nav-link:hover {
-    color: white !important;
-    transform: scale(1.08);
-  }
+.nav-link:hover {
+    transform: scale(1.05);
+}
 
 .navbar-scrolled{
     background-color: $bg7;
@@ -158,6 +186,28 @@ $height2: 80px;
         font-size: $fontsize1;
         position: relative;
         bottom: 150px;
+        animation-name: movimiento;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 2s; 
+        
+        @keyframes movimiento {
+            0% {
+            opacity: 0;
+            transform: translateY(100px);
+            }
+            30% {
+            opacity: 1;
+            text-shadow: 0 0 5px $bg3;
+            }
+            60% {
+            opacity: 1;
+            text-shadow: 0 0 10px $bg3;
+            }
+            100% {
+            transform: translateX(0);
+            }
+        }
     }
 
     .index-subtitle{
@@ -166,6 +216,7 @@ $height2: 80px;
         color: $color1;
         position: relative;
         bottom: 170px;
+        @extend .index-title
     }
     .index-text{
         font-family: $font2;
@@ -175,10 +226,12 @@ $height2: 80px;
         margin-bottom: 50px;
         position: relative;
         bottom: 170px;
+        @extend .index-title
     }
 
 
-    //About me Card//
+//About me Card//
+
         h3{
         font-size: $fontsize2;
         font-family: $font1;
@@ -189,6 +242,7 @@ $height2: 80px;
             border-radius: 5px;
             max-width: 550px;
             margin: 0 auto;
+            transition: all 1.5s;
                 
             .card-body{
                 padding-right: 30px;
@@ -225,6 +279,9 @@ $height2: 80px;
                     }
                 }
             }
+        }
+        .aboutme1:hover{
+            transform: scale(1.08);
         }
 }
 
@@ -464,7 +521,7 @@ $height2: 80px;
         
         .accordion-button:not(.collapsed)::after {
             background-image: url(../img/icons/arrow_down.png);
-            transform: rotate(-180deg);
+            transform: rotate(180deg);
         }
 
         .accordion-collapse{
@@ -539,9 +596,10 @@ $height2: 80px;
             .swiper-slide{
                 background-color: none;
                 border: 1px solid rgba(0, 0, 0, .125);
+                transition: all 0.5s;
 
                 .card-body{
-
+                
                     .card-text1{
                         color: $color4;
                         font-weight: bold;
@@ -565,14 +623,23 @@ $height2: 80px;
                     .card-text3{
                         position: absolute;
                         top: 70%;
+                        font-weight: bold;
+                        text-shadow: 2px 2px $bg3;
                     }
     
                     .btn1{
                         position: absolute;
                         top: 90%;
+                        font-weight: bold;
+                        text-shadow: 2px 2px $bg3;
                     }
                 }
             }
+
+            .swiper-slide:hover{
+                transform: scale(1.05);
+            }
+
         }
 
         .swiper-pagination-bullet-active {
@@ -800,7 +867,6 @@ footer{
 
     }
 
-
     .footer1{
         
         ul{
@@ -810,9 +876,12 @@ footer{
                 font-size: $fontsize4;
                 display: inline-block;
                 padding: 5px;
+                
 
                 a{
                     color: $color3;
+                    transition: all 0.5s;
+                    
                 }
                 a:hover{
                     color: $color2;
@@ -834,22 +903,64 @@ footer{
     flex-direction: column;
     align-items: center;
 
+    .face{
+        animation-name: aparecer2;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 2s;
+        
+        @keyframes aparecer2 {
+            from {
+            opacity: 0;
+            }
+            to {
+            opacity: 1;
+            transform: rotateY(360deg);
+            }
+        }
+    }
+
     .about-title {
         font-family: $font1;
-        font-size: $fontsize1;    
+        font-size: $fontsize1;
+        animation-name: movimiento;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 2s; 
+        
+        @keyframes movimiento {
+            0% {
+            opacity: 0;
+            transform: translateY(100px);
+            }
+            30% {
+            opacity: 1;
+            text-shadow: 0 0 5px black;
+            }
+            60% {
+            opacity: 1;
+            text-shadow: 0 0 10px black;
+            }
+            100% {
+            transform: translateX(0);
+            }
+        }
     }
 
     .about-subtitle{
         font-family: $font1;
         font-size: $fontsize4;
         color: $color1;
+        @extend .about-title
     }
     
     .about-text{
         font-size: $fontsize4;
+        font-family: $font2;
         max-width: 380px;
         margin: 0 auto;
         padding-bottom: 20px;
+        @extend .about-title
     }
 
     .aboutme{
@@ -862,6 +973,9 @@ footer{
         }
     }
 }
+
+
+
 
 //My Story//
 .mystory{
@@ -1087,9 +1201,33 @@ footer{
 }
 
 //CONTACT ME//
+
 footer{
     h2{
        padding-top: 80px;
+    }
+
+    .noahFooter{
+        animation-name: aparecer;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 3s;
+
+        @keyframes aparecer {
+            0% {
+            opacity: 0;
+            transform: translateX(200px);
+            }
+            30% {
+            opacity: 1;
+            }
+            60% {
+              opacity: 1;
+            }
+            100% {
+              transform: translateX(0);
+            }
+        }
     }
 }
 
@@ -1097,3 +1235,4 @@ footer{
     background-color: rgba(255, 255, 255, 0.5);
     transition: all 2s;
 }
+
